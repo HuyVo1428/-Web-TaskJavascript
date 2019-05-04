@@ -12,7 +12,7 @@
 <body  onload="startTime()">
   <div class="container">
   <h2><strong>Task 3.2</strong> Tìm hiểu và sử dụng một số khái niệm và lệnh cơ bản trong Javascript</h2>
-  <ul class="nav nav-tabs">
+  <ul id="menutag" class="nav nav-tabs">
     <li class="active"><a href="#home">Question 1</a></li>
     <li><a href="#menu1">Question 2</a></li>
     <li><a href="#menu2">Question 3</a></li>
@@ -326,6 +326,30 @@ function startTime(){
   var t = setTimeout(startTime, 500);
 }
           </xmp></pre>
+      </div>
+      <div>
+        <h3>Viết 1 hàm (function) để tính tổng giá trị của 2 số ngẫu nhiên từ 1 đến 100.</h3>
+        <div>
+          <button onclick=addRanNum()>Add random</button>
+          <p id="question4_3"></p>
+        </div>
+        <h4>Source code</h4>
+        <pre><xmp>
+function addRanNum() {
+    var num1 = Math.floor(Math.random() * 100) + 1;
+    var num2 = Math.floor(Math.random() * 100) + 1;
+
+    var result = num1 + num2;
+
+    document.getElementById("question4_3").innerHTML = num1 + " " + "+" + " " + num2 + " " + "=" + " " + result;
+
+    var t = setTimeout(addRanNum, 5000);
+}</xmp></pre>
+      </div>
+      <div>
+        <h3>Đổi màu nền hay hình nền của trang</h3>
+        <button onclick=changeBackgroundImg()>Change Background</button>
+        <button onclick=changeColorBackground()>Change Background Color</button>
       </div>
     </div>
   </div>
